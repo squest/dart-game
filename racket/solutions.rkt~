@@ -1,0 +1,7 @@
+#lang racket
+
+(define (sol1 lim)
+  (reduce +
+          (remove-duplicates
+           (append (range 3 lim 3)
+                   (range 5 lim 5)))))

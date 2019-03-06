@@ -23,12 +23,24 @@ int euler002 () {
 }
 
 int euler003 () {
-  int res = 0;
-  for (int i = 3; i < 20 ; i += 2) {
-    if (isPrime(i)) {
-      print(i);
-      res += i;
+  int res = 3;
+  int start = 600851475143;
+  do {
+    while (start % res == 0) {
+      start = start ~/ res;
     }
-  }
+    res = nextPrime(res);
+  } while (res < start);
   return res;
 }
+
+
+
+
+
+
+
+
+
+
+
